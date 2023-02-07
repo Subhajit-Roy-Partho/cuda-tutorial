@@ -9,6 +9,10 @@ int main(void){
     int c;
     int *c2;
     cudaMalloc((void**)&c2,sizeof(int));
-    add<<<1,1>>>(2,7,c);
+    add<<<1,1>>>(2,7,c2);
     cudaMemcpy(&c,c2,sizeof(int),cudaMemcpyDeviceToHost);
+    cout<< "2+7 =" << c <<endl;
+    cudaFree(c2);
+
+    return 0;
 }
