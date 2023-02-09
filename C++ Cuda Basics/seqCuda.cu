@@ -9,6 +9,6 @@ using namespace std;
 int main(){
     const int N=5e4;
     thrust::device_vector<int> a(N); //array created
-    thrust::sequence(a.begin(),a.end(),0);
+    thrust::sequence(a.begin(),a.end(),0); // sequence creatd 0,1,2,3,....
     
 }
