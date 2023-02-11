@@ -4,7 +4,7 @@ using namespace std;
 #define N 1000
 
 __global__ void add(int *a, int *b, int *c){
-    int tid = blockIdx.x;
+    int tid = blockIdx.x; //tid is the unique block id, similar to MPI rank.
     if (tid<N)
         c[tid] = a[tid] + b[tid];
 }
